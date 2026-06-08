@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sandhya | Portfolio</title>
+
+<meta name="description" content="Personal Portfolio Website of Sandhya showcasing skills, projects and achievements.">
+<meta name="keywords" content="Portfolio, HTML5, Accessibility, Web Development, Student">
+<meta name="author" content="Sandhya">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+/* Header */
+header{
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    color:white;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+/* Hero */
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(rgba(79,70,229,.9),
+    rgba(124,58,237,.9));
+    color:white;
+    padding:30px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:white;
+    color:#4f46e5;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* Sections */
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:36px;
+    color:#4f46e5;
+}
+
+/* About */
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+}
+
+/* Cards */
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#4f46e5;
+    margin-bottom:10px;
+}
+
+/* Aside */
+aside{
+    margin-top:40px;
+    background:#eef2ff;
+    padding:20px;
+    border-left:5px solid #4f46e5;
+    border-radius:10px;
+}
+
+/* Contact */
+form{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:600;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#4f46e5;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#3730a3;
+}
+
+/* Footer */
+footer{
+    background:#1e293b;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Skip Link */
+.skip-link{
+    position:absolute;
+    left:-999px;
+}
+
+.skip-link:focus{
+    left:10px;
+    top:10px;
+    background:yellow;
+    padding:10px;
+    color:black;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">
+Skip to Main Content
+</a>
+
+<header>
+<nav aria-label="Main Navigation">
+
+<div class="logo">Sandhya</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+<main id="main-content">
+
+<section class="hero" id="home">
+<div>
+<h1>Hello, I'm Sandhya</h1>
+<p>Student • Web Developer • AI Enthusiast</p>
+<a href="#projects" class="btn">View Projects</a>
+</div>
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<article class="about">
+<p>
+I am a passionate student interested in Web Development,
+Artificial Intelligence and Machine Learning. I enjoy
+creating responsive websites and learning modern
+technologies that solve real-world problems.
+</p>
+</article>
+
+<aside>
+<h3>Quick Facts</h3>
+<p>
+✔ HTML5 & CSS3 <br>
+✔ Python Programming <br>
+✔ Machine Learning Enthusiast <br>
+✔ Continuous Learner
+</p>
+</aside>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="card-container">
+
+<article class="card">
+<h3>HTML5</h3>
+<p>Semantic and accessible website development.</p>
+</article>
+
+<article class="card">
+<h3>CSS3</h3>
+<p>Responsive and modern user interface design.</p>
+</article>
+
+<article class="card">
+<h3>JavaScript</h3>
+<p>Interactive and dynamic web applications.</p>
+</article>
+
+<article class="card">
+<h3>Python</h3>
+<p>Programming, automation and machine learning.</p>
+</article>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="card-container">
+
+<article class="card">
+<h3>Portfolio Website</h3>
+<p>
+Developed a fully responsive portfolio website
+using HTML5 and CSS3.
+</p>
+</article>
+
+<article class="card">
+<h3>Machine Learning Project</h3>
+<p>
+Built prediction models using Python and ML
+algorithms.
+</p>
+</article>
+
+<article class="card">
+<h3>AI Chatbot</h3>
+<p>
+Designed a chatbot capable of basic interaction
+and responses.
+</p>
+</article>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<form aria-label="Contact Form">
+
+<label for="name">Full Name</label>
+<input
+type="text"
+id="name"
+name="name"
+required>
+
+<label for="email">Email Address</label>
+<input
+type="email"
+id="email"
+name="email"
+required>
+
+<label for="message">Message</label>
+<textarea
+id="message"
+name="message"
+rows="5"
+required></textarea>
+
+<button
+type="submit"
+aria-label="Send Message">
+Send Message
+</button>
+
+</form>
+
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Sandhya Portfolio | Built with Semantic HTML5 & Accessibility Standards</p>
+</footer>
+
+</body>
+</html>
